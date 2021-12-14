@@ -1,0 +1,15 @@
+from tkinter import *
+from tkinter.ttk import Treeview
+root=Tk()
+root.configure(bg="purple")
+root.geometry("900x3p00")
+root.title("city phone number book")
+column = ("id", "name", "lastname","phone number")
+tv = Treeview(root, columns=column, show="headings")
+tv.heading("id", text="student id")
+tv.heading("name", text="student name")
+tv.heading("lastname", text="student lastname")
+tv.heading("phone number", text="student phone number")
+tv.insert('',END,values=('a number for Numbering','your name','your lastname','your phone number'))
+tv.pack()
+root.mainloop()
